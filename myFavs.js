@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     setTimeout(() => {
       $loader.style.display = "none";
       $sectionPokeApi.append(fragment);
-    }, 2000);
+    }, 1000);
   }
 
   const pokemons = document.querySelectorAll(".card-poke-api");
