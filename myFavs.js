@@ -13,11 +13,11 @@ const $btnDelfavs = document.querySelector(".btn-del-poke-api");
 const ls = localStorage;
 const myFavs = JSON.parse(ls.getItem("myFavs")) || [];
 
-$loader.style.display = "block";
 function toUpper(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+$loader.style.display = "block";
 document.addEventListener("DOMContentLoaded", async (e) => {
   const res = await (
     await axios("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150")
@@ -53,9 +53,12 @@ document.addEventListener("DOMContentLoaded", async (e) => {
       $clone = $template.cloneNode(true);
       fragment.append($clone);
     }
-    $sectionPokeApi.append(fragment);
+    setTimeout(() => {
+      $loader.style.display = "none";
+      $sectionPokeApi.append(fragment);
+    }, 2000);
   }
-  $loader.style.display = "none";
+
   const pokemons = document.querySelectorAll(".card-poke-api");
   const getPokemons = () => {
     const searchText = $inputSearch.value.toLowerCase();
