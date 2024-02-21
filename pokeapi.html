@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="pokeapi.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Honk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-title">
+            <a id="pokedex-title" href="/index.html"> <img src="/Assets/pokebola header .png" alt="">Pokedex</a>
+        </div>
+        <button class="panel-btn hamburger hamburger--vortex" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <nav class="header-nav">
+            <ul class="nav-ul ">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="">History</a></li>
+                <li><a href="">Videos</a></li>
+                <li><a href="/pokeapi.html">Pokedex</a></li>
+                <li><a href="/myFavs.html">My favs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <form class="form-search-api">
+            <label for="search-poke-api">
+                <h3>Pokemon</h3>
+            </label>
+            <div class="inputs-poke-api">
+                <input id="search-poke-api" type="search" autocomplete="off">
+                <input id="submit-poke-api" type="submit" value="search">
+            </div>
+        </form>
+        <section class="section-poke-api">
+            <div style="display: none;" class="ball"></div>
+        </section>
+        <template class="template">
+            <div class="card-poke-api">
+                <div class="img-container">
+                    <img class="img-poke-api" src="" alt="">
+                </div>
+                <p class="name-poke-api"></p>
+                <button class="btn-add-poke-api">Add to favs</button>
+                <button style="display: none;" class="btn-del-poke-api">Delete</button>
+            </div>
+        </template>
+    </section>
+    <script src="headers.js"></script>
+    <script src="pokeapi.js"></script>
+</body>
+
+</html>

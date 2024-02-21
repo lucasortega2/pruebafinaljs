@@ -1,0 +1,267 @@
+header {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+  height: 50px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  transition: all 0.7s ease-in-out;
+  margin-bottom: 100px;
+  z-index: 999;
+}
+
+.header2 {
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(10, 87, 33, 0.5);
+}
+
+.header-title {
+  margin-left: 50px;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.header-title img {
+  width: 35px;
+  height: auto;
+}
+#pokedex-title {
+  display: flex;
+  align-items: center;
+  width: 10vw;
+  justify-content: space-between;
+}
+.header-title a {
+  font-size: 30px;
+  font-weight: bold;
+  width: 100px;
+}
+.header-nav {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.hamburger,
+.hamburger--vortex,
+.hamburger-box,
+.hamburger-inner,
+.panel-btn {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+}
+
+.nav-ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bolder;
+  height: 100%;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1e95a7;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-ul li a.active {
+  background-color: #1e95a7;
+  border-radius: 4px;
+}
+
+.header-title {
+  margin-left: 50px;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.header-title a {
+  font-size: 30px;
+  font-weight: bold;
+  width: 100px;
+}
+
+.header-nav {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bolder;
+  height: 100%;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1e95a7;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 1090px) {
+  header {
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-title a {
+    font-size: 20px;
+  }
+
+  .header-nav {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hamburger,
+  .hamburger--vortex,
+  .hamburger-box,
+  .hamburger-inner,
+  .panel-btn {
+    display: flex;
+    visibility: visible;
+    position: absolute;
+  }
+  .panel-btn {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-title {
+    width: 100%;
+    justify-content: center;
+    margin-right: 15vw;
+    margin-top: 0.5vh;
+  }
+
+  .nav-ul {
+    position: absolute;
+    z-index: 998;
+    background-color: #000;
+    display: flex;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    transform: translatey(-120%);
+    transition: transform 0.5s ease-in-out;
+    font-size: 1.5rem;
+    overflow: hidden;
+    border-radius: 50px;
+    width: 30vw;
+    min-width: 200px;
+    height: 30vh;
+  }
+
+  .nav-ul.is-active {
+    transform: translatey(0);
+  }
+
+  .nav-ul li a {
+    transition: 0.5s all ease;
+    width: 100%;
+    display: block;
+    color: #fff;
+  }
+
+  .nav-ul a:hover {
+    position: relative;
+  }
+
+  .nav-ul a:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: -5vw;
+    width: 20vw;
+    height: 2px;
+    background: linear-gradient(to right, red, blue);
+    animation: wave 0.5s infinite alternate;
+  }
+
+  @keyframes wave {
+    from {
+      transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(1.5);
+    }
+  }
+}

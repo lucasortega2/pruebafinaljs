@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+}
+body {
+  background: url(/Assets/background.png) no-repeat top;
+  background-size: 100% 50vw;
+  display: grid;
+  grid-template-rows: max-content 50vw max-content;
+}
+
+.sect-welc-pok {
+  display: flex;
+  justify-content: end;
+}
+.art-welc-pok {
+  margin-top: 75px;
+  height: 140px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: space-around;
+}
+.art-welc-pok h3 {
+  font-size: 40px;
+}
+.art-welc-pok button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6ec6ff;
+  border: none;
+  border-radius: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.art-welc-pok button:hover {
+  background-color: #4ca0e0;
+}
+.div-pokemon-history {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 80%;
+  margin: auto;
+  height: max-content;
+}
+.h3-history {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+.pokemon-history,
+.pokemon-gameboy {
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
+  position: relative;
+}
+.art-pok-history-1,
+.art-pok-gameboy-2 {
+  color: #41bf58;
+  font-size: 50px;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: start;
+}
+.pokemon-history svg {
+  position: absolute;
+  left: 0;
+}
+.pokemon-gameboy svg {
+  position: absolute;
+  right: 0;
+}
+.art-pok-history-1 div {
+  display: flex;
+  justify-content: space-evenly;
+  width: max-content;
+  align-items: center;
+}
+.art-pok-history-1 img {
+  width: 50px;
+  height: 50px;
+}
+
+.art-pok-history-2,
+.art-pok-gameboy-1 {
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: max-content;
+}
+.art-pok-history-2,
+.art-pok-gameboy-1 p {
+  line-height: 25px;
+}
+.art-pok-history-2 h3 {
+  margin-bottom: 15px;
+  color: #41bf58;
+  font-size: 25px;
+}
+
+.art-pok-gameboy-1 h3 {
+  color: #ff0000;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+.art-pok-gameboy-2 {
+  justify-content: end;
+}
+.art-pok-gameboy-2 img {
+  width: 50px;
+  height: 50px;
+}
+
+.art-pok-gameboy-2 div {
+  color: #ff0000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media screen and (max-width: 1400px) {
+  .div-pokemon-history {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .art-welc-pok {
+    height: 200px;
+  }
+  .art-welc-pok h3 {
+    text-align: center;
+  }
+  .art-pok-history-1 {
+    width: 78%;
+  }
+  .art-pok-history-2,
+  .art-pok-gameboy-1 p {
+    font-size: 20px;
+  }
+  .pokemon-history {
+    padding: 0;
+    flex-direction: column;
+    height: max-content;
+  }
+  .div-pokemon-history {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100% + 200px);
+  }
+  .h3-history {
+    text-align: center;
+    font-size: 30px;
+  }
+  .div-pokemon-history img {
+    margin: 0;
+  }
+  .art-pok-history-1 {
+    justify-content: start;
+  }
+  .pokemon-gameboy {
+    flex-direction: column;
+    padding: 0;
+    height: max-content;
+  }
+  .art-pok-gameboy-2 {
+    width: 90%;
+    justify-content: end;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    grid-template-rows: repeat(3, max-content) !important;
+    background-size: 100% auto !important;
+  }
+  .art-pok-history-1,
+  .art-pok-gameboy-2 {
+    font-size: 30px;
+  }
+  .art-pok-history-1 img,
+  .art-pok-gameboy-2 img {
+    width: 30px;
+    height: 30px;
+  }
+  .art-pok-history-1 {
+    justify-content: end;
+    width: 75%;
+  }
+  .art-pok-gameboy-2 {
+    justify-content: start;
+    width: 75%;
+  }
+}
